@@ -42,6 +42,29 @@ const Navbar = () => {
           People
         </Typography>
       </div>
+      <div>
+        <Typography
+          component={Link}
+          to='/countries'
+          className={classes.heading}
+          variant='body2'
+          align='center'
+        >
+          <b>Countries</b>
+        </Typography>
+      </div>
+      <div>
+        <Typography
+          component={Link}
+          to='/about'
+          className={classes.heading}
+          variant='body2'
+          align='center'
+        >
+          <b>About</b>
+        </Typography>
+      </div>
+
       <Toolbar className={classes.toolbar}>
         {user ? (
           <div className={classes.profile}>

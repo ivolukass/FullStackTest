@@ -5,6 +5,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Auth from './components/Auth/Auth';
+import GraphQL from './components/GraphQL/GraphQL';
+import Country from './components/GraphQL/Countries/Country';
+import about from './pages/about';
 
 const App = () => (
   <BrowserRouter>
@@ -13,6 +16,9 @@ const App = () => (
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/auth' exact component={Auth} />
+        <Route path='/countries' exact component={GraphQL} />
+        <Route path='/countries/:code' exact component={Country} />
+        <Route path='/about' exact component={about} />
       </Switch>
     </Container>
   </BrowserRouter>
