@@ -15,12 +15,12 @@ export const getPeople = async (req, res) => {
 };
 
 export const getPerson = async (req, res) => {
-  const { id } = req.params;
+  const { id: _id } = req.params;
 
   try {
-    const person = await PeopleList.findById(id);
+    const peopleList = await PeopleList.findById(_id);
 
-    res.status(200).json(person);
+    res.status(200).json(peopleList);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }

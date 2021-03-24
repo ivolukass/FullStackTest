@@ -15,6 +15,7 @@ API.interceptors.request.use((req) => {
 // const url = 'http://localhost:5000/people';
 
 export const fetchPeople = () => API.get('/people');
+export const fetchPerson = (id) => API.get(`/people/${id}`);
 export const createPerson = (newPerson) => API.post('/people', newPerson);
 export const updatePerson = (id, updatedPerson) =>
   API.patch(`/people/${id}`, updatedPerson);
